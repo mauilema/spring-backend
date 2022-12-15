@@ -37,6 +37,19 @@ public class UserRepository {
         return null;
     }
 
+    //double check this method.
+    public static User deleteUser(int userId) {
+        User deletedUser = null;
+        for (User u:userList) {
+            deletedUser = u;
+            if (u.getUserId() == userId) {
+                userList.remove(userId);
+                return deletedUser;
+            }
+        }
+        return deletedUser;
+    }
+
     public User getUser() {
         User user = new User("Jose", "lvl 7 backend st", 27);
         return user;

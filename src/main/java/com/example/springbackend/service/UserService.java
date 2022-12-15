@@ -24,6 +24,10 @@ public class UserService {
         return UserRepository.updateUserById(userId, user);
     }
 
+    public static User deleteUser(int userId) {
+        return UserRepository.deleteUser(userId);
+    }
+
     public User getUser() {
         return userRepository.getUser();
     }
