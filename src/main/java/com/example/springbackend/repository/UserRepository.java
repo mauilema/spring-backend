@@ -25,6 +25,18 @@ public class UserRepository {
         return null;
     }
 
+    public static User updateUserById(int userId, User user) {
+        for (User u:userList) {
+            if (u.getUserId() == userId) {
+                u.setName(user.getName());
+                u.setAddress(user.getAddress());
+                u.setAge(user.getAge());
+                return u;
+            }
+        }
+        return null;
+    }
+
     public User getUser() {
         User user = new User("Jose", "lvl 7 backend st", 27);
         return user;

@@ -20,6 +20,10 @@ public class UserService {
         return UserRepository.getUserById(userId);
     }
 
+    public static User updateUserById(int userId, User user) {
+        return UserRepository.updateUserById(userId, user);
+    }
+
     public User getUser() {
         return userRepository.getUser();
     }
