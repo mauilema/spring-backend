@@ -5,6 +5,8 @@ import com.example.springbackend.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api")
 public class UserResource {
@@ -17,5 +19,15 @@ public class UserResource {
     @PostMapping("/user")
     public User saveUser(@RequestBody User user) {
         return UserService.saveUser(user);
+    }
+
+    @GetMapping("/users")
+    public List<User> getAllUsers() {
+        return userService.getAllUsers();
+    }
+
+    @GetMapping("/user/{userId}")
+    public User getUserById(@PathVariable("userId") int userId) {
+        return UserService.getUserById(userId);
     }
 }

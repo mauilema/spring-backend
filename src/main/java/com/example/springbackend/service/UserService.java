@@ -5,6 +5,8 @@ import com.example.springbackend.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class UserService {
     @Autowired
@@ -14,7 +16,15 @@ public class UserService {
         return UserRepository.saveUser(user);
     }
 
+    public static User getUserById(int userId) {
+        return UserRepository.getUserById(userId);
+    }
+
     public User getUser() {
         return userRepository.getUser();
+    }
+
+    public List<User> getAllUsers() {
+        return userRepository.getAllUsers();
     }
 }
