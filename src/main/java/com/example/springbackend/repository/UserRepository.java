@@ -37,13 +37,12 @@ public class UserRepository {
         return null;
     }
 
-    //double check this method.
     public static User deleteUser(int userId) {
         User deletedUser = null;
         for (User u:userList) {
             deletedUser = u;
             if (u.getUserId() == userId) {
-                userList.remove(userId);
+                userList.remove(u);
                 return deletedUser;
             }
         }
