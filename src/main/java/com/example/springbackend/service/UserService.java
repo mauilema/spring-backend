@@ -16,17 +16,19 @@ public class UserService {
         return userRepository.save(user);
     }
 
-        public List<User> getAllUsers() {
+    public List<User> getAllUsers() {
         return userRepository.findAll();
     }
+
+    public User updateUserById(User user) {
+        return userRepository.save(user);
+    }
+
 
 //    public static User getUserById(int userId) {
 //        return UserRepository.getUserById(userId);
 //    }
 //
-//    public static User updateUserById(int userId, User user) {
-//        return UserRepository.updateUserById(userId, user);
-//    }
 //
 //    public static User deleteUser(int userId) {
 //        return UserRepository.deleteUser(userId);
