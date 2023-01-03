@@ -12,27 +12,27 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
-    public static User saveUser(User user) {
-        return UserRepository.saveUser(user);
+    public User saveUser(User user) {
+        return userRepository.save(user);
     }
 
-    public static User getUserById(int userId) {
-        return UserRepository.getUserById(userId);
-    }
-
-    public static User updateUserById(int userId, User user) {
-        return UserRepository.updateUserById(userId, user);
-    }
-
-    public static User deleteUser(int userId) {
-        return UserRepository.deleteUser(userId);
-    }
-
-    public User getUser() {
-        return userRepository.getUser();
-    }
-
-    public List<User> getAllUsers() {
-        return userRepository.getAllUsers();
-    }
+//    public static User getUserById(int userId) {
+//        return UserRepository.getUserById(userId);
+//    }
+//
+//    public static User updateUserById(int userId, User user) {
+//        return UserRepository.updateUserById(userId, user);
+//    }
+//
+//    public static User deleteUser(int userId) {
+//        return UserRepository.deleteUser(userId);
+//    }
+//
+//    public User getUser() {
+//        return userRepository.getUser();
+//    }
+//
+//    public List<User> getAllUsers() {
+//        return userRepository.getAllUsers();
+//    }
 }
