@@ -23,6 +23,11 @@ public class UserResource {
         return userService.getAllUsers();
     }
 
+    @PutMapping
+    public User updateUserById(@RequestBody User user) {
+        return userService.updateUserById(user);
+    }
+
 //    @GetMapping("/user")
 //    public User getUser(){return userService.getUser();}
 //
@@ -32,10 +37,6 @@ public class UserResource {
 //        return UserService.getUserById(userId);
 //    }
 //
-//    @PutMapping("/user/{userId}")
-//    public User updateUserById(@PathVariable("userId") int userId, @RequestBody User user) {
-//        return UserService.updateUserById(userId, user);
-//    }
 //
 //    @DeleteMapping("/user")
 //    public User deleteUser(@RequestParam(name = "userId") int userId) {
