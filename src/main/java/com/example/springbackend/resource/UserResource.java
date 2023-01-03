@@ -23,6 +23,11 @@ public class UserResource {
         return userService.getAllUsers();
     }
 
+    @GetMapping("/find")
+    public List<User> getByAddress(@RequestParam(name = "address") String address) {
+        return userService.getByAddress(address);
+    }
+
     @PutMapping
     public User updateUserById(@RequestBody User user) {
         return userService.updateUserById(user);
