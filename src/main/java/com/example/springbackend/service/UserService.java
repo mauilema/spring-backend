@@ -16,6 +16,10 @@ public class UserService {
         return userRepository.save(user);
     }
 
+        public List<User> getAllUsers() {
+        return userRepository.findAll();
+    }
+
 //    public static User getUserById(int userId) {
 //        return UserRepository.getUserById(userId);
 //    }
@@ -32,7 +36,5 @@ public class UserService {
 //        return userRepository.getUser();
 //    }
 //
-//    public List<User> getAllUsers() {
-//        return userRepository.getAllUsers();
-//    }
+
 }
