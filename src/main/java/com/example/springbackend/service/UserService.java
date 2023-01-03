@@ -24,15 +24,17 @@ public class UserService {
         return userRepository.save(user);
     }
 
+    public void deleteUser(String userId) {
+        userRepository.deleteById(userId);
+    }
+
 
 //    public static User getUserById(int userId) {
 //        return UserRepository.getUserById(userId);
 //    }
 //
 //
-//    public static User deleteUser(int userId) {
-//        return UserRepository.deleteUser(userId);
-//    }
+
 //
 //    public User getUser() {
 //        return userRepository.getUser();
