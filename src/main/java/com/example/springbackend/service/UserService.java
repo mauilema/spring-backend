@@ -32,17 +32,4 @@ public class UserService {
         return userRepository.findAllByAddress(address);
     }
 
-
-//    public static User getUserById(int userId) {
-//        return UserRepository.getUserById(userId);
-//    }
-//
-//
-
-//
-//    public User getUser() {
-//        return userRepository.getUser();
-//    }
-//
-
 }

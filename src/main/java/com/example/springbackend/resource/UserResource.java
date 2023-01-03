@@ -38,14 +38,4 @@ public class UserResource {
         userService.deleteUser(userId);
     }
 
-//    @GetMapping("/user")
-//    public User getUser(){return userService.getUser();}
-//
-//
-//    @GetMapping("/user/{userId}")
-//    public User getUserById(@PathVariable("userId") int userId) {
-//        return UserService.getUserById(userId);
-//    }
-//
-//
 }
