@@ -4,6 +4,8 @@ import com.example.springbackend.exception.RestrictedInfoException;
 import com.example.springbackend.model.User;
 import com.example.springbackend.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -34,8 +36,8 @@ public class UserResource {
     }
 
     @ExceptionHandler(RestrictedInfoException.class)
-    public String restrictedInfoError(RestrictedInfoException ex) {
-        return ex.getMessage();
+    public ResponseEntity<String> restrictedInfoError(RestrictedInfoException ex) {
+        return new ResponseEntity<>(ex.getMessage(), HttpStatus.BAD_REQUEST);
     }
 
     @GetMapping("/find-by-id")
@@ -44,8 +46,8 @@ public class UserResource {
     }
 
     @ExceptionHandler(NoSuchElementException.class)
-    public String noSuchElementError() {
-        return "No such element found";
+    public ResponseEntity<String> noSuchElementError() {
+        return new ResponseEntity<>("No such element found", HttpStatus.CONFLICT);
     }
 
     @PutMapping
