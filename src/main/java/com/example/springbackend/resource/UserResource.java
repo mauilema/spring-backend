@@ -35,19 +35,9 @@ public class UserResource {
         return userService.getByAddress(address);
     }
 
-    @ExceptionHandler(RestrictedInfoException.class)
-    public ResponseEntity<String> restrictedInfoError(RestrictedInfoException ex) {
-        return new ResponseEntity<>(ex.getMessage(), HttpStatus.BAD_REQUEST);
-    }
-
     @GetMapping("/find-by-id")
     public User getById(@RequestParam("userId") String userId) {
         return userService.getById(userId);
-    }
-
-    @ExceptionHandler(NoSuchElementException.class)
-    public ResponseEntity<String> noSuchElementError() {
-        return new ResponseEntity<>("No such element found", HttpStatus.CONFLICT);
     }
 
     @PutMapping
