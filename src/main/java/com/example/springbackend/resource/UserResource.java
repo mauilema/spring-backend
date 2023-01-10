@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 
 @RestController
 @RequestMapping("/api/users")
@@ -26,6 +27,16 @@ public class UserResource {
     @GetMapping("/find")
     public List<User> getByAddress(@RequestParam(name = "address") String address) {
         return userService.getByAddress(address);
+    }
+
+    @GetMapping("/find-by-id")
+    public User getById(@RequestParam("userId") String userId) {
+        return userService.getById(userId);
+    }
+
+    @ExceptionHandler(NoSuchElementException.class)
+    public String noSuchElementError() {
+        return "No such element found";
     }
 
     @PutMapping
