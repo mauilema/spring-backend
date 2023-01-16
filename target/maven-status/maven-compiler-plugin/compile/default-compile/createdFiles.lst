@@ -1,8 +1,10 @@
 com/example/springbackend/model/User.class
 com/example/springbackend/ServletInitializer.class
 com/example/springbackend/exception/RestrictedInfoException.class
+com/example/springbackend/validation/ValidName.class
 com/example/springbackend/repository/UserRepository.class
 com/example/springbackend/service/UserService.class
 com/example/springbackend/exception/GlobalExceptionHandler.class
 com/example/springbackend/resource/UserResource.class
+com/example/springbackend/validation/ValidNameValidator.class
 com/example/springbackend/SpringBackendApplication.class
