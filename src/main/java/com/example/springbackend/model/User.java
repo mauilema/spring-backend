@@ -1,12 +1,19 @@
 package com.example.springbackend.model;
 
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotEmpty;
+import org.hibernate.validator.constraints.Length;
 import org.springframework.data.annotation.Id;
 
 public class User {
     @Id
     private String id;
+    @NotEmpty
     private String name;
+    @Length(max = 10)
     private String address;
+    @Min(13) @Max(100)
     private int age;
 
     public User(String name, String address, int age) {
