@@ -3,6 +3,8 @@
 /Users/josemlema/Desktop/spring-backend/src/main/java/com/example/springbackend/service/UserService.java
 /Users/josemlema/Desktop/spring-backend/src/main/java/com/example/springbackend/ServletInitializer.java
 /Users/josemlema/Desktop/spring-backend/src/main/java/com/example/springbackend/exception/RestrictedInfoException.java
+/Users/josemlema/Desktop/spring-backend/src/main/java/com/example/springbackend/resource/FileResource.java
+/Users/josemlema/Desktop/spring-backend/src/main/java/com/example/springbackend/service/FileService.java
 /Users/josemlema/Desktop/spring-backend/src/main/java/com/example/springbackend/validation/ValidName.java
 /Users/josemlema/Desktop/spring-backend/src/main/java/com/example/springbackend/model/User.java
 /Users/josemlema/Desktop/spring-backend/src/main/java/com/example/springbackend/resource/UserResource.java
