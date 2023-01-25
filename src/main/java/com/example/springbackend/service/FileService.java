@@ -23,7 +23,7 @@ public class FileService {
             ObjectMetadata metadata = new ObjectMetadata();
             metadata.setContentLength(file.getSize());
             metadata.setContentType(file.getContentType());
-            s3.putObject("backend-winter23", file.getOriginalFilename(), file.getInputStream(), metadata);
+            s3.putObject(System.getenv("AWS_S3_BUCKET_NAME"), file.getOriginalFilename(), file.getInputStream(), metadata);
             return true;
         } catch (AmazonServiceException | IOException e) {
             e.printStackTrace();
