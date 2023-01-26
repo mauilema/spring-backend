@@ -42,4 +42,9 @@ public class FileResource {
                 .body(new ByteArrayResource(object.getObjectContent().readAllBytes()));
     }
 
+    @DeleteMapping("/delete")
+    public void delete(@RequestParam(name = "key") String key) {
+        fileService.deleteFile(key);
+    }
+
 }
