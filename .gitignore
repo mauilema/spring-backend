@@ -1,3 +1,5 @@
 **/.DS_Store
 src/main/resources/backend-winter23-firebase.json
 spring-backend/src/main/resources/backend-winter23-firebase.json
+spring-backend/target/classes/backend-winter23-firebase.json
+target/classes/backend-winter23-firebase.json
