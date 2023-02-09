@@ -34,8 +34,8 @@ public class FirebaseService {
     public FirebaseUser authenticate(String idToken) throws IOException, FirebaseAuthException {
 
         String uid = FirebaseAuth.getInstance(initializeFirebase()).verifyIdToken(idToken).getUid();
-        String name = FirebaseAuth.getInstance(initializeFirebase()).verifyIdToken(idToken).getName();
-        String email = FirebaseAuth.getInstance(initializeFirebase()).verifyIdToken(idToken).getEmail();
+        String name = FirebaseAuth.getInstance().verifyIdToken(idToken).getName();
+        String email = FirebaseAuth.getInstance().verifyIdToken(idToken).getEmail();
 
         return new FirebaseUser(uid, name, email);
     }
