@@ -9,6 +9,7 @@
 /Users/josemlema/Desktop/spring-backend/src/main/java/com/example/springbackend/service/UserService.java
 /Users/josemlema/Desktop/spring-backend/src/main/java/com/example/springbackend/ServletInitializer.java
 /Users/josemlema/Desktop/spring-backend/src/main/java/com/example/springbackend/model/FirebaseUser.java
+/Users/josemlema/Desktop/spring-backend/src/main/java/com/example/springbackend/config/FirebaseConfig.java
 /Users/josemlema/Desktop/spring-backend/src/main/java/com/example/springbackend/validation/ValidName.java
 /Users/josemlema/Desktop/spring-backend/src/main/java/com/example/springbackend/model/User.java
 /Users/josemlema/Desktop/spring-backend/src/main/java/com/example/springbackend/validation/ValidNameValidator.java
